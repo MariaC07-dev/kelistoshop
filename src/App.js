@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { withRouter, Switch} from "react-router-dom";
+import { Flex } from "rebass";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from "./components/home";
+import Products from "./components/products";
+
+import SideMenu from "./components/sideMenu/sideMenu";
+
+import PropsRoute from "./lib/propsRoute";
+
+class App extends Component {
+
+  render() {
+    return (
+
+          <div>
+            <Flex style={{ minHeight: 750 }}>
+              <PropsRoute
+                path="/"
+                component={SideMenu}
+
+              />
+              <Switch>
+                <PropsRoute exact path="/" component={Home} />
+                <PropsRoute
+                  path="/products"
+                  component={Products}
+                />
+              </Switch>
+            </Flex>
+          </div>
+    );
+  }
 }
 
-export default App;
+export default withRouter(App);
