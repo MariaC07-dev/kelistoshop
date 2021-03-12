@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomePageHeading = styled.h1`
-  font-size: 20px;
+  font-size: 40px;
   margin-left: 160px;
 `;
 

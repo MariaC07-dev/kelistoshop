@@ -8,21 +8,16 @@ class Home extends Component {
   render() {
     return (
       <div style={{marginTop:"100px"}}>
-      <div style={{display: "grid", gridTemplateColumns: "1fr 1fr"}}>
-        <HomePageHeading>Welcome to Kelisto Shop Online!</HomePageHeading>
-        <div style={{ textAlign: "center" }}>
-          <p>Version 1.0</p>
-          <p>This is a new version released on 18 December 2020.</p>
+        <HomePageHeading>Welcome to our Shop Online!</HomePageHeading>
+        <br/>
+        <div style={{marginTop:"40px", marginLeft:"100px"}}>
+          <h2>Version 1.0</h2>
+          <p>This is a new version released on 1st of March 2020.</p>
           <p>
-            Christmas time is here again.
-            You can now see our wide range of products.
+            You can now explore our products online by going to our products page.
           </p>
-          <p>
-            Grab your winter promotions.
-            HO! HO! HO! Merry Christams and a Happy New Year from Kelisto team!
-          </p>
+          <p>You can find our products page by clicking on the Products, on the left side menu.</p>
         </div>
-      </div>
    </div>
     );
   }
